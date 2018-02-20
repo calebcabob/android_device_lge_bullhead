@@ -1,14 +1,26 @@
 [
   {
-    "remote": "omnirom",
+    "remote": "LineageOS",
     "repository": "android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision": "android-8.0"
+    "revision":      "lineage-15.1"
   },
   {
     "remote": "omnirom",
     "repository": "android_hardware_qcom_gps",
     "target_path": "hardware/qcom/gps",
-    "revision": "android-8.0"
+    "revision":      "android-8.1"
+  },
+  {
+    "remote": "TheMuppets",
+    "repository": "proprietary_vendor_lge",
+    "target_path": "vendor/lge",
+    "revision":      "lineage-15.1"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_packages_apps_SnapdragonCamera2",
+    "target_path": "packages/apps/SnapdragonCamera2",
+    "revision":      "android-8.1"
   }
 ]

@@ -31,7 +31,9 @@
 -priv-app/DMConfigUpdate/DMConfigUpdate.apk
 -priv-app/DMService/DMService.apk
 -priv-app/GCS/GCS.apk:priv-app/GCS/GCS.apk:PRESIGNED
--priv-app/HotwordEnrollmentWCD9330/HotwordEnrollmentWCD9330.apk:priv-app/HotwordEnrollmentWCD9330/HotwordEnrollmentWCD9330.apk:PRESIGNED
+-priv-app/HotwordEnrollmentOKGoogleWCD9330/HotwordEnrollmentOKGoogleWCD9330.apk:priv-app/HotwordEnrollmentOKGoogleWCD9330/HotwordEnrollmentOKGoogleWCD9330.apk:PRESIGNED
+-priv-app/HotwordEnrollmentTGoogleWCD9330/HotwordEnrollmentTGoogleWCD9330.apk:priv-app/HotwordEnrollmentTGoogleWCD9330/HotwordEnrollmentTGoogleWCD9330.apk:PRESIGNED
+-priv-app/HotwordEnrollmentXGoogleWCD9330/HotwordEnrollmentXGoogleWCD9330.apk:priv-app/HotwordEnrollmentXGoogleWCD9330/HotwordEnrollmentXGoogleWCD9330.apk:PRESIGNED
 -priv-app/LifeTimerService/LifeTimerService.apk
 -priv-app/SprintDM/SprintDM.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
@@ -76,11 +78,15 @@ etc/izat.conf
 etc/lowi.conf
 etc/permissions/cneapiclient.xml
 etc/permissions/com.android.omadm.service.xml
+etc/permissions/com.android.sdm.plugins.connmo.xml
+etc/permissions/com.android.sdm.plugins.sprintdm.xml
+etc/permissions/privapp-permissions-bullhead.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/qti_permissions.xml
 etc/permissions/rcsservice.xml
 etc/qcril.db
 etc/sap.conf
+etc/sysconfig/bullhead_common.xml
 etc/sysconfig/whitelist_com.android.omadm.service.xml
 etc/thermal-engine-8992.conf
 -framework/cneapiclient.jar:PRESIGNED
