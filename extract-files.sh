@@ -1,6 +1,7 @@
 #!/bin/bash -e
 #
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -58,14 +59,12 @@ setup_vendor "$DEVICE" "$VENDOR" "$REPO_ROOT"
 
 # Extract the device specific files that always occur in /system
 extract "$MY_DIR/lineage-proprietary-blobs.txt" "$SRC"
-extract "$MY_DIR/omni-proprietary-blobs.txt" "$SRC"
 
 ## Handle blobs that may be in /system OR /vendor (only occurs when extracting from nexus images)
 
 # if we're extracting from factory images, pre-hardlink missing blobs from /vendor to /system
 if [ "$SRC" != "adb" ]; then
   for file in $(egrep -v '(^#|^$)' "$MY_DIR"/lineage-proprietary-blobs-vendorimg.txt); do
-  for file in $(egrep -v '(^#|^$)' "$MY_DIR"/omni-proprietary-blobs-vendorimg.txt); do
 
      oldifs=$IFS IFS=":" parsing_array=($file) IFS=$oldifs
 
@@ -91,6 +90,5 @@ fi
 
 # Extract "sometimes system" blobs
 extract "$MY_DIR/lineage-proprietary-blobs-vendorimg.txt" "$SRC"
-extract "$MY_DIR/omni-proprietary-blobs-vendorimg.txt" "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh
