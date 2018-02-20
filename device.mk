@@ -236,6 +236,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    libgps.utils \
     gps.msm8992
 
 # NFC packages
@@ -280,9 +281,9 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app \
     android.hardware.camera.provider@2.4-impl \
     camera.device@3.2-impl \
-    Snap
-
-# Snap Config
+    SnapdragonCamera2
+    
+# SnapdragonCamera2 Config
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false
 
