@@ -1,9 +1,15 @@
 [
   {
-    "remote": "LineageOS",
+    "remote": "SyberHexen",
     "repository": "android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "lineage-15.1"
+    "revision":      "android-8.1"
+  },
+  {
+    "remote": "SyberHexen",
+    "repository": "android_device_lge_bullhead",
+    "target_path": "device/lge/bullhead",
+    "revision":      "android-8.1"
   },
   {
     "remote": "omnirom",
