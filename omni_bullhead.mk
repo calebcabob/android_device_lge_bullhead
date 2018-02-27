@@ -1,11 +1,11 @@
 # Inherit omni-specific board config
 include device/lge/bullhead/BoardConfigOmni.mk
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
 # Inherit device configuration
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 
 ## Device identifier. This must come after all inclusions
