@@ -163,7 +163,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # for off charging mode
 PRODUCT_PACKAGES += \
-    charger_res_images
+    omni_charger_res_images
 
 PRODUCT_PACKAGES += \
     gralloc.msm8992 \
@@ -519,6 +519,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.tnr.preview=0 \
     persist.camera.tnr.video=0
 
+# Enable camera EIS		
+# eis.enable: enables electronic image stabilization		
+# is_type: sets image stabilization type
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.eis.enable=1 \
+    persist.camera.is_type=4
+
 # Incoming number (b/23529711)
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.redir_party_num=0
@@ -567,7 +574,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vts.coverage=1
 endif
 
-# only include verity on user builds for LineageOS
+# only include verity on user builds for OmniRom
 ifeq ($(TARGET_BUILD_VARIANT),user)
    PRODUCT_COPY_FILES += device/lge/bullhead/fstab-verity.bullhead:root/fstab.bullhead
 
@@ -594,6 +601,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.det_timeout=2500 \
     ro.facelock.rec_timeout=3500 \
     ro.facelock.est_max_time=600
+
+# miracast props
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.debug.wfd.enable=1﻿
+
+#Project Fi VoLTE Stuff
+# Debug Options
+#PRODUCT_PROPERTY_OVERRIDES += \
+#persist.dbg.ims_volte_enable=1 \
+#persist.dbg.volte_avail_ovr=1 \
+#persist.dbg.vt_avail_ovr=1  \
+#persist.dbg.wfc_avail_ovr=1
+
+#Project Fi VoLTE Stuff
+# Radio Options
+#PRODUCT_PROPERTY_OVERRIDES += \
+#persist.radio.rat_on=combine \
+#persist.radio.data_ltd_sys_ind=1 \
+#persist.radio.data_con_rprt=1 \
+#persist.radio.calls.on.ims=1
 
 $(call inherit-product-if-exists, hardware/qcom/msm8994/msm8992.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8994/msm8994-gpu-vendor.mk)
