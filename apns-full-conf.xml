@@ -7273,16 +7273,6 @@
       protocol="IPV4V6"
   />
 
-  <apn carrier="Virgin Mobile"
-      mcc="302"
-      mnc="610"
-      apn="pda.bell.ca"
-      type="default,mms,supl"
-      mmsc="http://mms.bell.ca/mms/wapenc"
-      mvno_match_data="3E"
-      mvno_type="gid"
-  />
-
   <apn carrier="MTS"
       mcc="302"
       mnc="660"
