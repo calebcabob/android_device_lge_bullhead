@@ -9,5 +9,7 @@ allow radio ims_socket:sock_file write;
 
 allow radio persist_file:dir search;
 
+allow radio system_app_data_file:dir getattr;
+
 # Connect to ims service.
 #HACK allow radio ims:unix_stream_socket connectto;

@@ -1,0 +1,4 @@
+#Omni
+allow hal_graphics_allocator_default sysfs:file read;
+allow hal_graphics_allocator_default sysfs:file open;
+allow hal_graphics_allocator_default sysfs:file getattr;

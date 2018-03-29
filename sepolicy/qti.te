@@ -14,3 +14,9 @@ allowxperm qti self:socket ioctl msm_sock_ipc_ioctls;
 
 # Allow qti to read and write rmnet_device
 allow qti rmnet_device:chr_file rw_file_perms;
+
+# Omni
+allow qti sysfs_ssr:dir search;
+allow qti sysfs_ssr:dir read;
+allow qti sysfs_ssr:dir open;
+allow qti sysfs_ssr:lnk_file read;

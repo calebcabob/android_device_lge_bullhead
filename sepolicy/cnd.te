@@ -20,6 +20,13 @@ allow cnd self:capability { setuid setgid net_raw };
 # for cnd to operate.
 dontaudit cnd self:capability fsetid;
 
+#Omni
+allow cnd sysfs_ssr:dir search;
+allow cnd sysfs_ssr:dir read;
+allow cnd sysfs_ssr:dir open;
+allow cnd sysfs_ssr:file r_file_perms;
+allow cnd sysfs_ssr:lnk_file read;
+
 allow cnd self:socket create_socket_perms;
 allowxperm cnd self:socket ioctl msm_sock_ipc_ioctls;
 

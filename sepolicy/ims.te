@@ -17,6 +17,12 @@ set_prop(ims, qcom_ims_prop);
 # Allow ims to write to ims_socket
 allow ims ims_socket:sock_file write;
 
+#Omni
+allow ims sysfs_ssr:dir search;
+allow ims sysfs_ssr:dir read;
+allow ims sysfs_ssr:dir open;
+allow ims sysfs_ssr:lnk_file read;
+
 # talk to connectivity engine observer interface daemon (cnd)
 unix_socket_connect(ims, cnd, cnd)
 # talk to netd

@@ -22,6 +22,12 @@ allow rmt self:capability sys_admin;
 
 allow rmt ssd_block_device:blk_file rw_file_perms;
 
+# Omni
+allow rmt debugfs_rmts:dir search;
+allow rmt debugfs_rmts:file w_file_perms;
+allow rmt debugfs_rmts:file write;
+allow rmt debugfs_rmts:file open;
+
 allow rmt self:socket create_socket_perms;
 allowxperm rmt self:socket ioctl msm_sock_ipc_ioctls;
 

@@ -11,6 +11,13 @@ allow wcnss_service self:netlink_socket create_socket_perms_no_ioctl;
 allow wcnss_service smem_log_device:chr_file rw_file_perms;
 allow wcnss_service self:capability { setuid net_admin setgid };
 allow wcnss_service sysfs:file w_file_perms;
+allow wcnss_service sysfs_ssr:dir search;
 allow wcnss_service sysfs_usb:file w_file_perms;
+
+# Omni
+allow wcnss_service sysfs_ssr:dir search;
+allow wcnss_service sysfs_ssr:dir read;
+allow wcnss_service sysfs_ssr:dir open;
+allow wcnss_service sysfs_ssr:lnk_file read;
 
 qmux_socket(wcnss_service)

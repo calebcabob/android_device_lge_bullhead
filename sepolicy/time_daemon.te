@@ -10,6 +10,12 @@ allow time_daemon self:capability { setuid setgid };
 allow time_daemon self:socket create_socket_perms;
 allowxperm time_daemon self:socket ioctl msm_sock_ipc_ioctls;
 
+# Omni
+allow time_daemon sysfs_ssr:dir search;
+allow time_daemon sysfs_ssr:dir read;
+allow time_daemon sysfs_ssr:dir open;
+allow time_daemon sysfs_ssr:lnk_file read;
+
 allow time_daemon time_data_file:dir w_dir_perms;
 allow time_daemon time_data_file:file create_file_perms;
 
